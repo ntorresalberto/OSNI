@@ -1,0 +1,18 @@
+# CMake URL module
+#
+# It defines the following variables:
+# URL_FOUND         - TRUE
+# URL_INCLUDE_DIRS  - The URL include directory
+# URL_LIBRARIES     - The URL library
+# URL_VERSION       - The URL version in the form <major>.<minor>.<patchlevel>
+
+@PACKAGE_INIT@
+
+set(@PROJECT_NAME@_VERSION @PROJECT_VERSION@)
+
+set_and_check(@PROJECT_NAME@_INCLUDE_DIRS @PACKAGE_INCLUDE_INSTALL_DIR@/url)
+set_and_check(@PROJECT_NAME@_LIBRARY_DIR @PACKAGE_LIB_INSTALL_DIR@)
+find_library(@PROJECT_NAME@_LIBRARIES NAMES @PROJECT_NAME@ PATHS ${@PROJECT_NAME@_LIBRARY_DIR} NO_DEFAULT_PATH)
+
+include(FindPackageHandleStandardArgs)
+find_package_handle_standard_args(@PROJECT_NAME@ DEFAULT_MSG @PROJECT_NAME@_INCLUDE_DIRS @PROJECT_NAME@_LIBRARIES)
