@@ -43,13 +43,24 @@ target_link_libraries(${PROJECT_NAME} ${PROJECT_NAME}_Chebyshev Eigen3::Eigen)
 #add_executable(OSNI_test main.cpp)
 #target_link_libraries(OSNI_test ${PROJECT_NAME}  ForwardKinematics)
 
-#install (TARGETS ${PROJECT_NAME}
-#         ARCHIVE DESTINATION lib
-#         LIBRARY DESTINATION lib
-#         RUNTIME DESTINATION bin)
+# install headers
+install(DIRECTORY include/
+  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+
+
+install (TARGETS ${PROJECT_NAME}
+        ARCHIVE DESTINATION lib
+        LIBRARY DESTINATION lib
+        RUNTIME DESTINATION bin)
+
+# construct .cmake files
+include(CMakePackageConfigHelpers)
+write_basic_package_version_file(
+  ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}ConfigVersion.cmake
+  VERSION 0.0.1
+  COMPATIBILITY SameMajorVersion)
 
 # generates OSNIConfig.cmake file to use our package in other projects
-include(CMakePackageConfigHelpers)
 configure_package_config_file(
   Config.cmake.in # input template
   ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake # output config file
@@ -61,6 +72,6 @@ configure_package_config_file(
 # when running make install, config files should be copied as well
 install(
   FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake
-        #${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
+        ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
   DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/${PROJECT_NAME}/cmake
 )
