@@ -1,2 +1,0 @@
-/usr/bin/ar qc libSBP.a CMakeFiles/SBP.dir/src/strain_based_parameterisation.cpp.o
-/usr/bin/ranlib libSBP.a

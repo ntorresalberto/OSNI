@@ -1,2 +1,0 @@
-/usr/bin/ar qc libForwardKinematics.a CMakeFiles/ForwardKinematics.dir/src/quaternion_integrator.cpp.o
-/usr/bin/ranlib libForwardKinematics.a

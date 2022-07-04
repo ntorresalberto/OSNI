@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/OSNI_test.dir/main.cpp.o -o OSNI_test  libOSNI.a libForwardKinematics.a libOSNI.a libOSNI_Chebyshev.a 

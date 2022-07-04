@@ -1,6 +1,0 @@
-/home/andrea/Desktop/code/OSNI/build/CMakeFiles/OSNI_Chebyshev.dir
-/home/andrea/Desktop/code/OSNI/build/CMakeFiles/OSNI.dir
-/home/andrea/Desktop/code/OSNI/build/CMakeFiles/ForwardKinematics.dir
-/home/andrea/Desktop/code/OSNI/build/CMakeFiles/OSNI_test.dir
-/home/andrea/Desktop/code/OSNI/build/CMakeFiles/edit_cache.dir
-/home/andrea/Desktop/code/OSNI/build/CMakeFiles/rebuild_cache.dir

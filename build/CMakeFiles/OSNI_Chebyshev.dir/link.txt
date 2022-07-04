@@ -1,2 +1,0 @@
-/usr/bin/ar qc libOSNI_Chebyshev.a CMakeFiles/OSNI_Chebyshev.dir/src/chebyshev_differentiation.cpp.o
-/usr/bin/ranlib libOSNI_Chebyshev.a

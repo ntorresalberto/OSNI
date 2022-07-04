@@ -1,2 +1,0 @@
-/usr/bin/ar qc libOSNI.a CMakeFiles/OSNI.dir/src/spectral_integration_base.cpp.o CMakeFiles/OSNI.dir/src/ode_a.cpp.o CMakeFiles/OSNI.dir/src/ode_ab.cpp.o
-/usr/bin/ranlib libOSNI.a
